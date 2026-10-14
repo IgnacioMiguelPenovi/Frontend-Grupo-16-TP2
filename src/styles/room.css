@@ -8,10 +8,10 @@
     var(--wall-dark);
   min-height: 100svh;
 }
-.room.bart   { --wall: #5aa9e6; --wall-dark: #2f6fa8; }
-.room.lisa   { --wall: #b39ddb; --wall-dark: #6a4fa3; }
-.room.marge  { --wall: #ffe08a; --wall-dark: #c9902a; }
-.room.maggie { --wall: #ffc1dc; --wall-dark: #d76aa0; }
+.room.ignacio   { --wall: #5aa9e6; --wall-dark: #2f6fa8; }
+.room.ester   { --wall: #b39ddb; --wall-dark: #6a4fa3; }
+.room.eliana  { --wall: #ffe08a; --wall-dark: #c9902a; }
+.room.celeste { --wall: #ffc1dc; --wall-dark: #d76aa0; }
 
 .room-main { max-width: 1100px; margin: 0 auto; padding: 84px 16px 40px; }
 
@@ -30,7 +30,7 @@
   margin: 10px 12px 0;
 }
 .bart   .stage-frame { view-transition-name: room-bart; }
-.lisa   .stage-frame { view-transition-name: room-lisa; }
+.ester   .stage-frame { view-transition-name: room-ester; }
 .marge  .stage-frame { view-transition-name: room-marge; }
 .maggie .stage-frame { view-transition-name: room-maggie; }
 
@@ -262,9 +262,50 @@
 }
 .visit .avatar.plant-icon { object-fit: contain; object-position: center; padding: 3px; background: #b8d98a; }
 .visit .avatar.bart   { background: #5aa9e6; }
-.visit .avatar.lisa   { background: #b39ddb; }
+.visit .avatar.ester   { background: #b39ddb; }
 .visit .avatar.marge  { background: #ffe08a; }
 .visit .avatar.maggie { background: #ffc1dc; }
 
 .room-foot { text-align: center; color: #fff; padding: 30px 16px 40px; font-weight: 500; text-shadow: 0 2px 0 rgba(0,0,0,.35); }
 .room-foot p { margin: 0; }
+
+.caja-dinamica {
+  max-width: 900px;
+  margin: 36px auto 0;
+  padding: 22px;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: 0 8px 0 var(--ink);
+}
+
+.caja-dinamica h3 {
+  margin: 0 0 12px;
+  font-family: var(--font-title);
+  text-align: center;
+}
+
+.caja-dinamica p {
+  margin: 0 0 16px;
+}
+
+.boton.secundario {
+  display: flex;
+  padding: 8px 18px;
+  color: var(--ink);
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  justify-self: center;
+}
+
+.resultado-dinamico {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff;
+  border: 2px dashed var(--ink);
+  border-radius: 14px;
+  text-align: center;
+}

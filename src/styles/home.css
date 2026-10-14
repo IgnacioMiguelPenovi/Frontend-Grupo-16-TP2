@@ -323,10 +323,10 @@
   color: inherit;
   transition: transform .25s cubic-bezier(.3, 1.6, .5, 1);
 }
-.window[data-room="bart"]   { --room: #5aa9e6; --curtain: #ffd23f; view-transition-name: room-bart; }
-.window[data-room="lisa"]   { --room: #b39ddb; --curtain: #ff8fb8; view-transition-name: room-lisa; }
-.window[data-room="marge"]  { --room: #ffe08a; --curtain: #4bb04a; view-transition-name: room-marge; }
-.window[data-room="maggie"] { --room: #ffc1dc; --curtain: #8fd0f0; view-transition-name: room-maggie; }
+.window[data-room="ignacio"]   { --room: #5aa9e6; --curtain: #ffd23f; view-transition-name: room-ignacio; }
+.window[data-room="ester"]   { --room: #b39ddb; --curtain: #ff8fb8; view-transition-name: room-ester; }
+.window[data-room="eliana"]  { --room: #ffe08a; --curtain: #4bb04a; view-transition-name: room-eliana; }
+.window[data-room="celeste"] { --room: #ffc1dc; --curtain: #8fd0f0; view-transition-name: room-celeste; }
 
 .window:hover, .window:focus-visible { transform: translateY(-6px) scale(1.03); }
 
@@ -395,9 +395,9 @@
   transform-origin: bottom center;
   animation: bob 3.4s ease-in-out infinite;
 }
-.window[data-room="lisa"]   .glass img { animation-delay: -.8s; }
-.window[data-room="marge"]  .glass img { animation-delay: -1.6s; }
-.window[data-room="maggie"] .glass img { animation-delay: -2.4s; }
+.window[data-room="ester"]   .glass img { animation-delay: -.8s; }
+.window[data-room="eliana"]  .glass img { animation-delay: -1.6s; }
+.window[data-room="celeste"] .glass img { animation-delay: -2.4s; }
 @keyframes bob { 50% { transform: translateY(-3%) rotate(-1deg); } }
 
 .window:hover .glass,

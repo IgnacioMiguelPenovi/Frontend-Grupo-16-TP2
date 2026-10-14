@@ -13,17 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/bart" element={<Bart />} />
-        <Route
-          path="/lisa"
-          element={
-            <PlaceholderPage
-              title="Habitación de Ester"
-              subtitle="Lisa · Backend & Jazz"
-              name="Ester"
-              avatar="/img/avatar-ester.png"
-            />
-          }
-        />
+        <Route path='/ester' element={<EsterRoom />} />
         <Route
           path="/marge"
           element={
