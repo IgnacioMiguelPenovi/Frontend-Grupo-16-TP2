@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/base.css';
 import '../styles/home.css';
 import '../styles/room.css';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
-  // Estado para abrir y cerrar el garage (reemplaza la lógica de JS vanilla)
+  // Estado para abrir y cerrar el garage
   const [isGarageOpen, setIsGarageOpen] = useState(false);
 
   const [isLetterOpen, setIsLetterOpen] = useState(false);
@@ -16,17 +17,6 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* 1 · BARRA SUPERIOR */}
-      <header className="topbar">
-        <Link className="brand" to="/">
-          <img src="/img/logo.png" alt="" />
-          <span>Donuts &amp; Code</span>
-        </Link>
-        <nav aria-label="Principal">
-          <Link to="#casa">La casa</Link>
-          <Link to="/bitacora">Bitácora</Link>
-        </nav>
-      </header>
 
       <main className="world">
         {/* 2 · EL CIELO */}
@@ -77,11 +67,11 @@ export default function Home() {
 
           {/* Central nuclear */}
           <div className="skyline">
-            <a className="plant" href="/bitacora" aria-label="Bitácora: entrar a la central nuclear">
+            <Link className="plant" to="/bitacora" aria-label="Bitácora: entrar a la central nuclear">
               <span className="smoke" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
               <img src="/img/tower.svg" alt="" />
               <span className="tag pill">☢ Bitácora</span>
-            </a>
+            </Link>
           </div>
 
           <div className="scene">
@@ -97,6 +87,7 @@ export default function Home() {
                       <span className="frame"><span className="glass"><img src="/img/avatar-ignacio.png" alt="" /></span></span>
                       <span className="name">Ignacio<small>Low level programing</small></span>
                     </Link>
+
                     <Link
                       className="window"
                       to="/ester"
