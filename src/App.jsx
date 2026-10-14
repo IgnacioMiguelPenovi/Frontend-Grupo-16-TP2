@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Bart from './pages/Bart';
 import EsterRoom from './rooms/EsterRoom';
@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Sidebar />
       <Routes>
@@ -60,7 +60,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 
