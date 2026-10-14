@@ -9,18 +9,6 @@ export default function RoomLayout({
 }) {
   return (
     <div className={`room ${roomClass}`}>
-      {/* 1. Barra superior */}
-      <header className="topbar">
-        <a className="brand" href="/">
-          <img src="/img/logo.png" alt="Logo" />
-          <span>Donuts &amp; Code</span>
-        </a>
-        <nav aria-label="Principal">
-          <a href="/#casa">← La casa</a>
-          <a href="/bitacora.html">Bitácora</a>
-        </nav>
-      </header>
-
       <main className="room-main">
         {/* 2. Escenario del personaje */}
         <div className="stage-frame">

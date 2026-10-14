@@ -82,7 +82,7 @@ export default function Sidebar() {
             <p className="sidebar-nav-group-title">Integrantes</p>
             <ul className="sidebar-nav-list">
 
-              <SidebarItem label = "Ignacio" to="/bart" onClick={() => setIsOpen(false)}/>
+              <SidebarItem label = "Ignacio" to="/ignacio" onClick={() => setIsOpen(false)}/>
               <SidebarItem label = "Ester" to="/ester" onClick={() => setIsOpen(false)}/>
               <SidebarItem label = "Eliana" to="/marge" onClick={() => setIsOpen(false)}/>
               <SidebarItem label = "Celeste" to="/maggie" onClick={() => setIsOpen(false)}/>

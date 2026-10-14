@@ -1,6 +1,6 @@
 import {Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Bart from './pages/Bart';
+import IgnacioRoom from './rooms/IgnacioRoom';
 import EsterRoom from './rooms/EsterRoom';
 import PlaceholderPage from './pages/PlaceholderPage';
 import Sidebar from './components/Sidebar';
@@ -13,7 +13,7 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bart" element={<Bart />} />
+        <Route path="/ignacio" element={<IgnacioRoom />} />
         <Route path="/ester" element={<EsterRoom />} />
         <Route
           path="/marge"
