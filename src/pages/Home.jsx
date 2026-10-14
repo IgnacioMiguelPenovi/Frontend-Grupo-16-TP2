@@ -85,8 +85,8 @@ export default function Home() {
                     <Link className="window" data-room="bart" to="/bart" aria-label="Entrar a la habitación de Ignacio">
                       <span className="frame"><span className="glass"><img src="/img/avatar-ignacio.png" alt="" /></span></span>
                       <span className="name">Ignacio<small>Low level programing</small></span>
-                    </a>
-                    <a className="window" data-room="ester" href="/ester" aria-label="Entrar a la habitación de Ester">
+                    </Link>              
+                    <Link className="window" data-room="ester" to="/ester" aria-label="Entrar a la habitación de Ester">
                       <span className="frame"><span className="glass"><img src="/img/avatar-ester.png" alt="" /></span></span>
                       <span className="name">Ester<small>Backend &amp; Jazz</small></span>
                     </Link>
