@@ -1,7 +1,7 @@
-import { Routes, Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Bart from './pages/Bart';
-import EsterRoom from './rooms/EsterRoom'
+import EsterRoom from './rooms/EsterRoom';
 import PlaceholderPage from './pages/PlaceholderPage';
 import Sidebar from './components/Sidebar';
 import ScrollToTop from './components/ScrollToTop';
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/bart" element={<Bart />} />
-        <Route path='/ester' element={<EsterRoom />} />
+        <Route path="/ester" element={<EsterRoom />} />
         <Route
           path="/marge"
           element={
