@@ -83,7 +83,7 @@ export default function Sidebar() {
             <ul className="sidebar-nav-list">
 
               <SidebarItem label = "Ignacio" to="/bart" onClick={() => setIsOpen(false)}/>
-              <SidebarItem label = "Ester" to="/lisa" onClick={() => setIsOpen(false)}/>
+              <SidebarItem label = "Ester" to="/ester" onClick={() => setIsOpen(false)}/>
               <SidebarItem label = "Eliana" to="/marge" onClick={() => setIsOpen(false)}/>
               <SidebarItem label = "Celeste" to="/maggie" onClick={() => setIsOpen(false)}/>
             </ul>

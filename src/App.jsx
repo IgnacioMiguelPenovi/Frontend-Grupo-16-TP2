@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Bart from './pages/Bart';
+import EsterRoom from './rooms/EsterRoom'
 import PlaceholderPage from './pages/PlaceholderPage';
 import Sidebar from './components/Sidebar';
 import ScrollToTop from './components/ScrollToTop';
