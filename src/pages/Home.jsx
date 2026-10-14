@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/base.css';
 import '../styles/home.css';
 import'../styles/room.css';
 
 export default function Home() {
-  // Estado para abrir y cerrar el garage (reemplaza la lógica de JS vanilla)
+  // Estado para abrir y cerrar el garage
   const [isGarageOpen, setIsGarageOpen] = useState(false);
 
   const [isLetterOpen, setIsLetterOpen] = useState(false);
@@ -15,17 +16,6 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* 1 · BARRA SUPERIOR */}
-      <header className="topbar">
-        <a className="brand" href="/">
-          <img src="/img/logo.png" alt="" />
-          <span>Donuts &amp; Code</span>
-        </a>
-        <nav aria-label="Principal">
-          <a href="#casa">La casa</a>
-          <a href="/bitacora">Bitácora</a>
-        </nav>
-      </header>
 
       <main className="world">
         {/* 2 · EL CIELO */}
@@ -76,11 +66,11 @@ export default function Home() {
 
           {/* Central nuclear */}
           <div className="skyline">
-            <a className="plant" href="/bitacora" aria-label="Bitácora: entrar a la central nuclear">
+            <Link className="plant" to="/bitacora" aria-label="Bitácora: entrar a la central nuclear">
               <span className="smoke" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
               <img src="/img/tower.svg" alt="" />
               <span className="tag pill">☢ Bitácora</span>
-            </a>
+            </Link>
           </div>
 
           <div className="scene">
@@ -92,28 +82,28 @@ export default function Home() {
                 <div className="roof" aria-hidden="true"><span className="chimney"></span></div>
                 <div className="facade">
                   <div className="row up">
-                    <a className="window" data-room="bart" href="/bart" aria-label="Entrar a la habitación de Ignacio">
+                    <Link className="window" data-room="bart" to="/bart" aria-label="Entrar a la habitación de Ignacio">
                       <span className="frame"><span className="glass"><img src="/img/avatar-ignacio.png" alt="" /></span></span>
                       <span className="name">Ignacio<small>Low level programing</small></span>
                     </a>
                     <a className="window" data-room="ester" href="/ester" aria-label="Entrar a la habitación de Ester">
                       <span className="frame"><span className="glass"><img src="/img/avatar-ester.png" alt="" /></span></span>
                       <span className="name">Ester<small>Backend &amp; Jazz</small></span>
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="row down">
-                    <a className="window arch" data-room="marge" href="/marge" aria-label="Entrar a la habitación de Eliana">
+                    <Link className="window arch" data-room="marge" to="/marge" aria-label="Entrar a la habitación de Eliana">
                       <span className="frame"><span className="glass"><img src="/img/avatar-eliana.png" alt="" /></span></span>
                       <span className="name">Eliana<small>Tech Lead</small></span>
-                    </a>
+                    </Link>
 
                     <div className="door" aria-hidden="true"><i className="knob"></i><i className="peephole"></i></div>
 
-                    <a className="window arch" data-room="maggie" href="/maggie" aria-label="Entrar a la habitación de Celeste">
+                    <Link className="window arch" data-room="maggie" to="/maggie" aria-label="Entrar a la habitación de Celeste">
                       <span className="frame"><span className="glass"><img src="/img/avatar-celeste.png" alt="" /></span></span>
                       <span className="name">Celeste<small>Junior Dev</small></span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
