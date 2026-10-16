@@ -112,17 +112,35 @@ export default function Home() {
                   </div>
 
                   <div className="row down">
-                    <Link className="window arch" data-room="marge" href="/marge" aria-label="Entrar a la habitación de Eliana">
-                      <span className="frame"><span className="glass"><img src="/img/avatar-eliana.png" alt="" /></span></span>
-                      <span className="name">Eliana<small>Tech Lead</small></span>
+
+                    <Link
+                      className="window"
+                      to="/eliana"
+                      aria-label="Entrar a la habitación de Eliana"
+                    >
+                      <span className="frame">
+                        <span className="glass">
+                          <img src="/img/avatar-eliana.png" alt="" />
+                        </span>
+                      </span>
+                      <span className="name">Eliana<small>???</small></span>
                     </Link>
 
                     <div className="door" aria-hidden="true"><i className="knob"></i><i className="peephole"></i></div>
 
-                    <Link className="window arch" data-room="maggie" href="/maggie" aria-label="Entrar a la habitación de Celeste">
-                      <span className="frame"><span className="glass"><img src="/img/avatar-celeste.png" alt="" /></span></span>
-                      <span className="name">Celeste<small>Junior Dev</small></span>
+                    <Link
+                      className="window"
+                      to="/celeste"
+                      aria-label="Entrar a la habitación de Celeste"
+                    >
+                      <span className="frame">
+                        <span className="glass">
+                          <img src="/img/avatar-celeste.png" alt="" />
+                        </span>
+                      </span>
+                      <span className="name">Celeste<small>???</small></span>
                     </Link>
+
                   </div>
                 </div>
               </div>

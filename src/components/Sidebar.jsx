@@ -84,10 +84,11 @@ export default function Sidebar() {
 
               <SidebarItem label = "Ignacio" to="/ignacio" onClick={() => setIsOpen(false)}/>
               <SidebarItem label = "Ester" to="/ester" onClick={() => setIsOpen(false)}/>
-              <SidebarItem label = "Eliana" to="/marge" onClick={() => setIsOpen(false)}/>
-              <SidebarItem label = "Celeste" to="/maggie" onClick={() => setIsOpen(false)}/>
+              <SidebarItem label = "Eliana" to="/eliana" onClick={() => setIsOpen(false)}/>
+              <SidebarItem label = "Celeste" to="/celeste" onClick={() => setIsOpen(false)}/>
             </ul>
           </div>
+
         </nav>
 
         {/* Pie de la sidebar */}
