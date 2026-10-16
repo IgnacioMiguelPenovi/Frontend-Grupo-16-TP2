@@ -5,6 +5,8 @@ import EsterRoom from './rooms/EsterRoom';
 import PlaceholderPage from './pages/PlaceholderPage';
 import Sidebar from './components/Sidebar';
 import ScrollToTop from './components/ScrollToTop';
+import ElianaRoom from './rooms/ElianaRoom';
+import Bitacora  from './pages/Bitacora';
 
 function App() {
   return (
@@ -15,38 +17,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/ignacio" element={<IgnacioRoom />} />
         <Route path="/ester" element={<EsterRoom />} />
-        <Route
-          path="/marge"
-          element={
-            <PlaceholderPage
-              title="Habitación de Eliana"
-              subtitle="Marge · Tech Lead"
-              name="Eliana"
-              avatar="/img/avatar-eliana.png"
-            />
-          }
-        />
-        <Route
-          path="/maggie"
-          element={
-            <PlaceholderPage
-              title="Habitación de Celeste"
-              subtitle="Maggie · Junior Dev"
-              name="Celeste"
-              avatar="/img/avatar-celeste.png"
-            />
-          }
-        />
-        <Route
-          path="/bitacora"
-          element={
-            <PlaceholderPage
-              title="Bitácora de Donuts & Code"
-              subtitle="Central nuclear de decisiones"
-              name="el equipo de Donuts & Code"
-              avatar="/img/tower.svg"
-            />
-          }
+        <Route path="/eliana" element={<ElianaRoom />} />
+        <Route path="/celeste" element={<ElianaRoom />} />
+
+        <Route path="/bitacora" element={<Bitacora />}
         />
         <Route
           path="*"
