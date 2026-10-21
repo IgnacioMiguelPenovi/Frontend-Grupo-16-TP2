@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RoomLayout from '../components/RoomLayout';
 import '../styles/room.css';
+import PeinadoMarge from "../components/PeinadoMarge";
 
 const DATOS_ELIANA = {
   nombre: 'Eliana Moguilevsky',
@@ -21,7 +22,7 @@ const DATOS_ELIANA = {
 
 export default function ElianaRoom() {
 
-    // Su svg con el escenario y su icon
+    // Escenario SVG de Eliana
 const escenarioEliana = (
   <svg
     class="stage"
@@ -97,7 +98,7 @@ const escenarioEliana = (
 
   return (
     <RoomLayout roomClass="eliana" stage={escenarioEliana} perfil={DATOS_ELIANA}>
-       // Su js con el juego
+         <PeinadoMarge />
     </RoomLayout>
   );
 }

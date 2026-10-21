@@ -1,0 +1,221 @@
+/* ===== Peinado interactivo de Marge ===== */
+/* Usa las mismas variables definidas en css/base.css (--ink, --paper, --yellow, --pink, --sky) */
+
+.peinado-widget { text-align: center; margin-top: 24px; }
+
+.peinado-intro {
+  max-width: 56ch;
+  margin: 0 auto 18px;
+  font-size: 1rem;
+}
+
+/* Escenario de altura FIJA: nada de lo que pase adentro cambia este tamaño */
+.peinado-stage {
+  position: relative;
+  height: 440px;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* Todo se ancla desde abajo con position:absolute, así que */
+/* crecer hacia arriba nunca empuja nada hacia abajo. */
+.peinado-mini {
+  position: absolute;
+  inset: 0;
+}
+
+.peinado-mini .beads {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.peinado-mini .eyes {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.hair {
+  position: absolute;
+  left: 50%;
+  bottom: 58px; /* deja lugar fijo para ojos + collar debajo. Debe coincidir con HAIR_BASE_OFFSET en PeinadoMarge.jsx */
+  transform: translateX(-50%);
+  width: 130px;
+  height: 180px; /* valor inicial; React lo sobreescribe con style */
+  background: linear-gradient(180deg, #7fd0ff 0%, #3a8fd6 60%, #2f6fa8 100%);
+  border: 4px solid var(--ink);
+  border-top-left-radius: 65px;
+  border-top-right-radius: 65px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  box-shadow: inset -10px 0 0 rgba(0, 0, 0, .10), 0 4px 0 var(--ink);
+  transition: height .25s ease;
+  overflow: visible;
+}
+
+.peinado-mini .donut {
+  position: absolute;
+  left: 50%;
+  bottom: 238px; /* 58px del pelo + 180px inicial; React lo sobreescribe con style */
+  transform: translateX(-50%) rotate(-8deg);
+  font-size: 2.4rem;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, .2));
+  transition: bottom .25s ease;
+}
+
+.hair-object {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, 12px) scale(.4);
+  font-size: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease, bottom .25s ease;
+}
+/* Los objetos se reparten en 4 posiciones horizontales, también los que guarda la persona */
+.hair-object:nth-of-type(4n+1) { left: 30%; }
+.hair-object:nth-of-type(4n+2) { left: 70%; }
+.hair-object:nth-of-type(4n+3) { left: 50%; }
+.hair-object:nth-of-type(4n)   { left: 40%; }
+
+.hair-object.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+/* Los objetos que escondió la persona se distinguen de los de fábrica */
+.hair-object.objeto-guardado {
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .25));
+}
+
+.peinado-medida {
+  margin: 18px 0 4px;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.peinado-medida strong { color: var(--pink-dark); }
+
+.peinado-slider-label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+#peinadoRango {
+  width: min(100%, 420px);
+  accent-color: var(--pink);
+}
+
+.peinado-sep {
+  max-width: 420px;
+  margin: 26px auto;
+  border: none;
+  border-top: 3px dashed var(--ink);
+  opacity: .4;
+}
+
+.peinado-esconder h3 {
+  margin: 0 0 12px;
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+}
+
+.peinado-objetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.peinado-objetos label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+}
+.peinado-objetos label:hover { transform: translateY(-2px); background: var(--yellow); }
+.peinado-objetos input { accent-color: var(--pink); }
+
+/* Contenedor de los dos botones: lado a lado, y se apilan si no entran */
+.peinado-botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Base común de los dos botones */
+.btn-guardar,
+.btn-borrar {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 22px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 0 4px 0 var(--ink);
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+}
+.btn-guardar:hover,
+.btn-borrar:hover { transform: translateY(-2px); }
+.btn-guardar:active,
+.btn-borrar:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink); }
+
+/* Botón principal */
+.btn-guardar {
+  background: var(--pink);
+  color: #fff;
+}
+
+/* Botón secundario: blanco, para que no compita con el principal */
+.btn-borrar {
+  background: #fff;
+  color: var(--ink);
+}
+.btn-borrar:hover { background: var(--yellow); }
+
+/* Foco visible para quien navega con teclado */
+.btn-guardar:focus-visible,
+.btn-borrar:focus-visible,
+#peinadoRango:focus-visible,
+.peinado-objetos label:focus-within {
+  outline: 3px solid var(--sky);
+  outline-offset: 3px;
+}
+
+.peinado-msg {
+  margin: 14px auto 0;
+  max-width: 46ch;
+  min-height: 2.8em; /* reserva lugar para 2 líneas y evita saltos al cambiar el mensaje */
+  font-size: .95rem;
+  color: #55556e;
+}
+
+/* Respeta a quien pidió menos animaciones en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  .hair,
+  .peinado-mini .donut,
+  .hair-object,
+  .peinado-objetos label,
+  .btn-guardar,
+  .btn-borrar {
+    transition: none;
+  }
+}
