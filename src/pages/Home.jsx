@@ -123,7 +123,7 @@ export default function Home() {
                           <img src="/img/avatar-eliana.png" alt="" />
                         </span>
                       </span>
-                      <span className="name">Eliana<small>???</small></span>
+                      <span className="name">Eliana<small>Tech Lead</small></span>
                     </Link>
 
                     <div className="door" aria-hidden="true"><i className="knob"></i><i className="peephole"></i></div>
