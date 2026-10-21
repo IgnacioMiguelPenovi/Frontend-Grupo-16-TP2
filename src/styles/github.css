@@ -1,9 +1,30 @@
 .github-projects {
-  margin: 2rem 0;
+  margin: 3rem 0;
+  background-color: var(--paper);
+  padding: 2rem;
+  border-radius: 30px;
+  border: 4px solid #1a1a1a;
+  box-shadow: 4px 10px   #1a1a1a;
+}
+
+.github-projects__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.github-projects__title img {
+  width: 5rem;
+  height: auto;
 }
 
 .github-projects h2 {
-  margin-bottom: 1rem;
+  font-family: var(--font-title);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 1.8rem;
 }
 
 .github-projects__grid {

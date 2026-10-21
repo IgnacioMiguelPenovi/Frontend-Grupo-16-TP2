@@ -139,7 +139,8 @@ export default function EsterRoom() {
   return (
     <RoomLayout roomClass="ester" stage={escenarioEster} perfil={DATOS_ESTER}>
       <GitHubProjects username={"Kira-Blan"}/>
-      {/* Widget interactivo exclusivo de Ester */}
+
+      {/* Widget interactivo */}
       <div className="caja-dinamica">
         <h3>Dato curioso de IT</h3>
         <p>Un botón, un dato de cultura general sobre tecnología. Ideal para cortar el silencio en una reunión de equipo.</p>
