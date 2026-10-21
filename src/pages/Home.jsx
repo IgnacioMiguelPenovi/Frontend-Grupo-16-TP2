@@ -83,18 +83,9 @@ export default function Home() {
                 <div className="roof" aria-hidden="true"><span className="chimney"></span></div>
                 <div className="facade">
                   <div className="row up">
-                   
-                    <Link
-                      className="window"
-                      to="/ignacio"
-                      aria-label="Entrar a la habitación de Ignacio"
-                    >
-                      <span className="frame">
-                        <span className="glass">
-                          <img src="/img/avatar-ignacio.png" alt="" />
-                        </span>
-                      </span>
-                      <span className="name">Ignacio<small>Low level programin</small></span>
+                    <Link className="window" data-room="bart" href="/bart" aria-label="Entrar a la habitación de Ignacio">
+                      <span className="frame"><span className="glass"><img src="/img/avatar-ignacio.png" alt="" /></span></span>
+                      <span className="name">Ignacio<small>Low level programing</small></span>
                     </Link>
 
                     <Link

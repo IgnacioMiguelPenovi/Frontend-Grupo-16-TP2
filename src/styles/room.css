@@ -282,6 +282,7 @@
 .caja-dinamica h3 {
   margin: 0 0 12px;
   font-family: var(--font-title);
+  font-size: 1.7rem;
   text-align: center;
 }
 
