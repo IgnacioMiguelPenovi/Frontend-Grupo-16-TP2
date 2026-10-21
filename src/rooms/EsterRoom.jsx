@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RoomLayout from '../components/RoomLayout';
 import '../styles/room.css';
+import GitHubProjects from '../components/GitHubProjects';
 
 const DATOS_ESTER = {
   nombre: 'Ester Mosquera',
@@ -137,9 +138,10 @@ export default function EsterRoom() {
 
   return (
     <RoomLayout roomClass="ester" stage={escenarioEster} perfil={DATOS_ESTER}>
+      <GitHubProjects username={"Kira-Blan"}/>
       {/* Widget interactivo exclusivo de Ester */}
       <div className="caja-dinamica">
-        <h3>Dato curioso de Ester</h3>
+        <h3>Dato curioso de IT</h3>
         <p>Un botón, un dato de cultura general sobre tecnología. Ideal para cortar el silencio en una reunión de equipo.</p>
         <button
           className="boton secundario"
