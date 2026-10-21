@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import VisitRooms from './VisitRooms';
 
 export default function RoomLayout({
@@ -7,9 +7,38 @@ export default function RoomLayout({
   perfil,    // { nombre, rol, bio, chips, peliculas, discos }
   children   // El widget interactivo (Pizarra, peinado, juego o dato curioso)
 }) {
+  const [isNight, setIsNight] = useState(() => {
+    try {
+      return localStorage.getItem('donuts-code:night-mode') === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  const toggleNight = () => {
+    const nextNight = !isNight;
+    setIsNight(nextNight);
+    try {
+      localStorage.setItem('donuts-code:night-mode', String(nextNight));
+    } catch {
+      // La habitación funciona aunque el navegador no permita guardar preferencias.
+    }
+  };
+
   return (
-    <div className={`room ${roomClass}`}>
+    <div className={`room ${roomClass} ${isNight ? 'is-night' : ''}`}>
       <main className="room-main">
+        <div className="room-mode-control">
+          <button
+            className="room-mode-toggle"
+            type="button"
+            aria-pressed={isNight}
+            onClick={toggleNight}
+          >
+            {isNight ? '☀️ Modo día' : '🌙 Modo noche'}
+          </button>
+        </div>
+
         {/* 2. Escenario del personaje */}
         <div className="stage-frame">
           {stage}
