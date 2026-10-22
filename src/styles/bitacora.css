@@ -1,23 +1,54 @@
 /* ===== Bitácora: la chimenea de la central nuclear ===== */
 
-.log {
-  background: #232e39;
-  min-height: 100svh;
+/* ---------- control de modo día/noche ---------- */
+.log-mode-control {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
 }
 
-/* el aire de Springfield: gris arriba, verde radiactivo cerca de la torre */
+.log-mode-toggle {
+  padding: 8px 18px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--font-title, inherit);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--ink);
+  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+}
+
+.log-mode-toggle:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+/* ---------- modo día (default) ---------- */
+.log {
+  background: #70c4ff;
+  min-height: 100svh;
+  transition: background .4s ease;
+}
+
+/* el aire de Springfield de día: celeste arriba, verde brillante abajo */
 .smokeland {
   position: relative;
   overflow-x: clip;
   background: linear-gradient(
     180deg,
-    #1f2a36 0%,
-    #3a4d55 30%,
-    #5d7b5e 65%,
-    #9cc25a 92%,
-    #b9d96b 100%
+    #6ec1fb 0%,
+    #98d6ff 25%,
+    #bfe3af 65%,
+    #a2db6e 92%,
+    #8fcf52 100%
   );
   padding-top: 92px;
+  transition: background .4s ease;
 }
 
 /* ---------- titulo ---------- */
@@ -56,7 +87,7 @@
 .puff {
   --dx: 0px;
   /* mas abajo (cerca de la torre) = humo mas oscuro y denso; mas arriba = mas claro */
-  --smoke: color-mix(in srgb, #f6f7fa calc(var(--n) * 13%), #8d95a3);
+  --smoke: color-mix(in srgb, #ffffff calc(var(--n) * 12%), #e2e8f0);
   position: relative;
   isolation: isolate;
   width: min(600px, calc(100% - 28px));
@@ -297,3 +328,61 @@
 .log-foot .visit .avatar.marge  { background: #ffe08a; }
 .log-foot .visit .avatar.maggie { background: #ffc1dc; }
 .log-foot .visit .avatar.bart { background: #5aa9e6; }
+
+
+/* =========================================================
+   MODO NOCHE
+   ========================================================= */
+.log.is-night {
+  background: #141b24;
+}
+
+.log.is-night .smokeland {
+  background: linear-gradient(
+    180deg,
+    #131b26 0%,
+    #212f3b 28%,
+    #2f493d 65%,
+    #4a6c38 90%,
+    #53773a 100%
+  );
+}
+
+.log.is-night .log-mode-toggle {
+  background: #252f4e;
+  border-color: #10182f;
+  color: #fff;
+  box-shadow: 0 4px 0 #10182f;
+}
+
+.log.is-night .puff {
+  --smoke: color-mix(in srgb, #eaf0f8 calc(var(--n) * 12%), #8d95a3);
+  box-shadow:
+    inset -14px -18px 30px rgba(40, 50, 70, .35),
+    inset 10px 10px 24px rgba(255, 255, 255, .25),
+    0 10px 26px rgba(0, 0, 0, .45);
+}
+
+.log.is-night .puff::before,
+.log.is-night .puff::after {
+  box-shadow: inset -8px -10px 18px rgba(30, 40, 60, .35);
+}
+
+.log.is-night .log-hero p {
+  background: rgba(30, 41, 59, .92);
+  color: #f1f5f9;
+  border-color: #0f172a;
+  box-shadow: 0 4px 0 #0f172a;
+}
+
+.log.is-night .ground {
+  background:
+    repeating-linear-gradient(90deg, transparent 0 26px, rgba(0, 0, 0, .45) 26px 28px) 0 0 / 100% 22px no-repeat,
+    linear-gradient(#2d3b29 0 22px, #1c2419 22px);
+  border-top-color: #0f172a;
+}
+
+.log.is-night .log-foot {
+  background: #1c2419;
+  color: #cbd5e1;
+}

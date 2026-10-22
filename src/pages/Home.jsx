@@ -123,7 +123,7 @@ export default function Home() {
                           <img src="/img/avatar-ester.png" alt="" />
                         </span>
                       </span>
-                      <span className="name">Ester<small>Backend &amp; Jazz</small></span>
+                      <span className="name">Ester<small>Hype &amp; Hustle</small></span>
                     </Link>
                   </div>
 
