@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import RoomLayout from '../components/RoomLayout';
 import '../styles/room.css';
 import PizarraBart from '../components/PizarraBart';
+import GitHubProjects from '../components/GitHubProjects';
 
 const DATOS_IGNACIO = {
   nombre: 'Ignacio Miguel Penovi',
@@ -85,6 +86,7 @@ export default function IgnacioRoom() {
 
   return (
     <RoomLayout roomClass="ignacio" stage={escenarioIgnacio} perfil={DATOS_IGNACIO}>
+      <GitHubProjects username={"IgnacioMiguelPenovi "}/>
        <PizarraBart/>
     </RoomLayout>
   );
