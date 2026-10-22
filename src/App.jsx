@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar';
 import ScrollToTop from './components/ScrollToTop';
 import ElianaRoom from './rooms/ElianaRoom';
 import Bitacora  from './pages/Bitacora';
+import CelesteRoom from './rooms/CelesteRoom';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/ignacio" element={<IgnacioRoom />} />
         <Route path="/ester" element={<EsterRoom />} />
         <Route path="/eliana" element={<ElianaRoom />} />
-        <Route path="/celeste" element={<ElianaRoom />} />
+        <Route path="/celeste" element={<CelesteRoom />} />
 
         <Route path="/bitacora" element={<Bitacora />}
         />
