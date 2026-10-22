@@ -85,7 +85,7 @@ export default function IgnacioRoom() {
 
   return (
     <RoomLayout roomClass="ignacio" stage={escenarioIgnacio} perfil={DATOS_IGNACIO}>
-       // Su js con el juego
+       <PizarraBart/>
     </RoomLayout>
   );
 }
