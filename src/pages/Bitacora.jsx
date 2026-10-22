@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nube from '../components/Nube';
 import '../styles/base.css';
@@ -7,6 +7,14 @@ import '../styles/bitacora.css';
 // Registro de trabajo: del día más reciente al más antiguo.
 // Para agregar una nueva nube, solo sumá un nuevo objeto acá arriba con el siguiente n (ej: n: 6).
 export const ENTRADAS_BITACORA = [
+  {
+    n: 9,
+    dia: 'Miércoles',
+    fecha: '21 oct 2026',
+    datetime: '2026-10-21',
+    titulo: '¿Preferís la noche o el día?',
+    descripcion: 'Se agregó el modo noche/día en la SPA.'
+   },
    {
     n: 8,
     dia: 'Viernes',
@@ -78,9 +86,37 @@ export const ENTRADAS_BITACORA = [
 ];
 
 export default function Bitacora() {
+  const [isNight, setIsNight] = useState(() => {
+    try {
+      return localStorage.getItem('donuts-code:night-mode') === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  const toggleNight = () => {
+    const nextNight = !isNight;
+    setIsNight(nextNight);
+    try {
+      localStorage.setItem('donuts-code:night-mode', String(nextNight));
+    } catch {
+      // Ignorar si el almacenamiento local no está disponible
+    }
+  };
+
   return (
-    <div className="log">
+    <div className={`log ${isNight ? 'is-night' : ''}`}>
       <main className="smokeland">
+        <div className="log-mode-control">
+          <button
+            className="log-mode-toggle"
+            type="button"
+            aria-pressed={isNight}
+            onClick={toggleNight}
+          >
+            {isNight ? '☀️ Modo día' : '🌙 Modo noche'}
+          </button>
+        </div>
         <section className="log-hero">
           <h1 className="simpsons-title">Bitácora</h1>
           <p>

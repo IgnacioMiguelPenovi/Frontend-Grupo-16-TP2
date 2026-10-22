@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const INTEGRANTES = [
   { id: 'ignacio', nombre: 'Ignacio', url: '/ignacio', avatar: '/img/avatar-ignacio.png' },
@@ -17,17 +18,17 @@ export default function VisitRooms({ currentRoomId }) {
       <ul>
         {otros.map((item) => (
           <li key={item.id}>
-            <a href={item.url}>
+            <Link to={item.url}>
               <img className={`avatar ${item.id}`} src={item.avatar} alt="" />
               {item.nombre}
-            </a>
+            </Link>
           </li>
         ))}
         <li>
-          <a href="/bitacora.html">
+          <Link to="/bitacora">
             <img className="avatar plant-icon" src="/img/tower.svg" alt="" />
             Bitácora
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
