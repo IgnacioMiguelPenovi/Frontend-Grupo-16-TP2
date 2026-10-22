@@ -19,7 +19,7 @@ export default function VisitRooms({ currentRoomId }) {
         {otros.map((item) => (
           <li key={item.id}>
             <Link to={item.url}>
-              <img className={`avatar ${item.id}`} src={item.avatar} alt="" />
+              <img className={`avatar ${item.id}`} src={item.avatar} alt="Avatar del perfil" />
               {item.nombre}
             </Link>
           </li>
