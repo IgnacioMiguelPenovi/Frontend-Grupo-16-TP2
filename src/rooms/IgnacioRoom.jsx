@@ -40,7 +40,8 @@ export default function IgnacioRoom() {
         <rect x="-4" y="326" width="1008" height="16" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
 
         //ventana con cortinas
-        <image href="img/room-window.svg" x="70" y="50" width="200" height="211"/>
+        <image className="window-day" href="/img/room-window.svg" x="70" y="50" width="200" height="211"/>
+        <image className="window-night" href="/img/room-window-night.svg" x="70" y="50" width="200" height="211"/>
         <rect x="52" y="40" width="236" height="9" rx="4" fill="#5a3a2e" stroke="#1a1a1a" stroke-width="3"/>
         <rect x="58" y="49" width="34" height="220" rx="4" fill="#ffd23f" stroke="#1a1a1a" stroke-width="3"/>
         <rect x="248" y="49" width="34" height="220" rx="4" fill="#ffd23f" stroke="#1a1a1a" stroke-width="3"/>

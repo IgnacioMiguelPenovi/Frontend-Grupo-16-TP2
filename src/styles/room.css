@@ -13,6 +13,57 @@
 .room.eliana  { --wall: #ffe08a; --wall-dark: #c9902a; }
 .room.celeste { --wall: #ffc1dc; --wall-dark: #d76aa0; }
 
+
+/* De noche cambia y se atenúa solo la ilustración de la habitación. */
+.room.is-night .stage {
+  filter: brightness(.78) saturate(.88);
+  transition: filter .35s ease;
+}
+
+.stage .window-night {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.room.is-night .stage .window-day { opacity: 0; }
+.room.is-night .stage .window-night {
+  opacity: 1;
+  filter: brightness(1.28);
+}
+
+.room-mode-control {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 100;
+  display: flex;
+}
+
+.room-mode-toggle {
+  padding: 8px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  box-shadow: 0 4px 0 var(--ink);
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.room-mode-toggle:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+.room.is-night .room-mode-toggle {
+  background: #252f4e;
+  border-color: #10182f;
+  color: #fff;
+  box-shadow: 0 4px 0 #10182f;
+}
+
 .room-main { max-width: 1100px; margin: 0 auto; padding: 84px 16px 40px; }
 
 /* laptop / tablet grande: columna un poco mas angosta que en desktop */

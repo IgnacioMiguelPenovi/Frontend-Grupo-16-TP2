@@ -10,17 +10,42 @@ export default function Home() {
   const [isGarageOpen, setIsGarageOpen] = useState(false);
 
   const [isLetterOpen, setIsLetterOpen] = useState(false);
+  const [isNight, setIsNight] = useState(() => {
+    try {
+      return localStorage.getItem('donuts-code:night-mode') === 'true';
+    } catch {
+      return false;
+    }
+  });
 
   const toggleGarage = () => {
     setIsGarageOpen((prev) => !prev);
   };
 
+  const toggleNight = () => {
+    const nextNight = !isNight;
+    setIsNight(nextNight);
+    try {
+      localStorage.setItem('donuts-code:night-mode', String(nextNight));
+    } catch {
+      // La portada sigue funcionando aunque el navegador no permita guardar preferencias.
+    }
+  };
+
   return (
-    <div className="home">
+    <div className={`home ${isNight ? 'is-night' : ''}`}>
 
       <main className="world">
         {/* 2 · EL CIELO */}
         <section className="sky" aria-labelledby="titulo">
+          <button
+            className="mode-toggle"
+            type="button"
+            aria-pressed={isNight}
+            onClick={toggleNight}
+          >
+            {isNight ? '☀️ Modo día' : '🌙 Modo noche'}
+          </button>
           <div className="sun" aria-hidden="true"></div>
           <div className="clouds" aria-hidden="true">
             <i className="cloud" style={{ '--x': '4%', '--y': '14%', '--s': 1.5, '--t': '38s', '--dx': '70px', '--p': -0.5 }}></i>
@@ -83,7 +108,7 @@ export default function Home() {
                 <div className="roof" aria-hidden="true"><span className="chimney"></span></div>
                 <div className="facade">
                   <div className="row up">
-                    <Link className="window" data-room="bart" href="/bart" aria-label="Entrar a la habitación de Ignacio">
+                    <Link className="window" data-room="ignacio" to="/ignacio" aria-label="Entrar a la habitación de Ignacio">
                       <span className="frame"><span className="glass"><img src="/img/avatar-ignacio.png" alt="" /></span></span>
                       <span className="name">Ignacio<small>Low level programing</small></span>
                     </Link>
