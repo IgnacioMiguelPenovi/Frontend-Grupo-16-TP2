@@ -126,6 +126,10 @@ a { color: inherit; }
   @view-transition { navigation: none; }
 }
 
+#mode-toggle {
+ position: fixed;
+}
+
 /* Botón flotante Springfield */ 
 
 .btn-flotante-buscador {

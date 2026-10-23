@@ -41,6 +41,7 @@ export default function Home() {
           <button
             className="mode-toggle"
             type="button"
+            id="mode-toggle"
             aria-pressed={isNight}
             onClick={toggleNight}
           >
