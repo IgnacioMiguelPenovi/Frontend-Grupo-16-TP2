@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "name": "Homer Simpson"
+    },
+    {
+        "id": 2,
+        "name": "Marge Simpson"
+    },
+    {
+        "id": 3,
+        "name": "Bart Simpson"
+    },
+    {
+        "id": 4,
+        "name": "Lisa Simpson"
+    },
+    {
+        "id": 5,
+        "name": "Maggie Simpson"
+    },
+    {
+        "id": 6,
+        "name": "Abe Simpson II"
+    },
+    {
+        "id": 7,
+        "name": "Patty Bouvier"
+    },
+    {
+        "id": 8,
+        "name": "Selma Bouvier"
+    },
+    {
+        "id": 9,
+        "name": "Ned Flanders"
+    },
+    {
+        "id": 10,
+        "name": "Maude Flanders"
+    },
+    {
+        "id": 11,
+        "name": "Rod Flanders"
+    },
+    {
+        "id": 12,
+        "name": "Todd Flanders"
+    },
+    {
+        "id": 13,
+        "name": "Charles Montgomery Burns"
+    },
+    {
+        "id": 14,
+        "name": "Waylon Smithers, Jr."
+    },
+    {
+        "id": 15,
+        "name": "Krusty the Clown"
+    },
+    {
+        "id": 16,
+        "name": "Moe Szyslak"
+    },
+    {
+        "id": 17,
+        "name": "Apu Nahasapeemapetilon"
+    },
+    {
+        "id": 18,
+        "name": "Seymour Skinner"
+    },
+    {
+        "id": 19,
+        "name": "Gary Chalmers"
+    },
+    {
+        "id": 20,
+        "name": "Edna Krabappel"
+    },
+    {
+        "id": 21,
+        "name": "Otto Mann"
+    },
+    {
+        "id": 22,
+        "name": "Milhouse Van Houten"
+    },
+    {
+        "id": 23,
+        "name": "Luann Van Houten"
+    },
+    {
+        "id": 24,
+        "name": "Kirk Van Houten"
+    },
+    {
+        "id": 25,
+        "name": "Ralph Wiggum"
+    },
+    {
+        "id": 26,
+        "name": "Barney Gumble"
+    },
+    {
+        "id": 27,
+        "name": "Carl Carlson"
+    },
+    {
+        "id": 28,
+        "name": "Lenny Leonard"
+    },
+    {
+        "id": 29,
+        "name": "Clancy Wiggum"
+    },
+    {
+        "id": 30,
+        "name": "Sarah Wiggum"
+    },
+    {
+        "id": 31,
+        "name": "Julius Hibbert"
+    },
+    {
+        "id": 32,
+        "name": "Lou"
+    },
+    {
+        "id": 33,
+        "name": "Jonathan Frink, Jr."
+    },
+    {
+        "id": 34,
+        "name": "Professor Frink's son"
+    },
+    {
+        "id": 35,
+        "name": "Robert Terwilliger"
+    },
+    {
+        "id": 36,
+        "name": "Martin Prince, Jr."
+    },
+    {
+        "id": 37,
+        "name": "Nelson Muntz"
+    },
+    {
+        "id": 38,
+        "name": "Jimbo Jones"
+    },
+    {
+        "id": 39,
+        "name": "Kearney Zzyzwicz"
+    },
+    {
+        "id": 40,
+        "name": "Dolph Starbeam"
+    },
+    {
+        "id": 41,
+        "name": "Stu Discothèque"
+    },
+    {
+        "id": 42,
+        "name": "Joe Quimby"
+    },
+    {
+        "id": 43,
+        "name": "Fat Tony"
+    },
+    {
+        "id": 44,
+        "name": "Louie (mafia)"
+    },
+    {
+        "id": 45,
+        "name": "Melvin Van Horne"
+    },
+    {
+        "id": 46,
+        "name": "Comic Book Guy"
+    },
+    {
+        "id": 47,
+        "name": "Kent Brockman"
+    },
+    {
+        "id": 48,
+        "name": "Groundskeeper Willie"
+    },
+    {
+        "id": 49,
+        "name": "Cletus Spuckler"
+    },
+    {
+        "id": 50,
+        "name": "Brandine Spuckler"
+    },
+    {
+        "id": 51,
+        "name": "Dr. Nick"
+    },
+    {
+        "id": 52,
+        "name": "Elizabeth Hoover"
+    },
+    {
+        "id": 53,
+        "name": "Mona Simpson"
+    },
+    {
+        "id": 54,
+        "name": "Troy McClure"
+    },
+    {
+        "id": 55,
+        "name": "Timothy Lovejoy Jr."
+    },
+    {
+        "id": 56,
+        "name": "Helen Lovejoy"
+    },
+    {
+        "id": 57,
+        "name": "Jessica Lovejoy"
+    },
+    {
+        "id": 58,
+        "name": "Snake Jailbird"
+    },
+    {
+        "id": 59,
+        "name": "Eddie"
+    },
+    {
+        "id": 60,
+        "name": "Kodos"
+    }
+]

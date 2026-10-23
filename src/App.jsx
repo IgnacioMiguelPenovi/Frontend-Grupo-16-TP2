@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import IgnacioRoom from './rooms/IgnacioRoom';
@@ -8,8 +9,10 @@ import ScrollToTop from './components/ScrollToTop';
 import ElianaRoom from './rooms/ElianaRoom';
 import Bitacora  from './pages/Bitacora';
 import CelesteRoom from './rooms/CelesteRoom';
+import ModalDirectorio from './components/ModalDirectorio';
 
 function App() {
+  const [modalAbierto, setModalAbierto] = useState(false);
   return (
     <>
       <ScrollToTop />
@@ -20,9 +23,9 @@ function App() {
         <Route path="/ester" element={<EsterRoom />} />
         <Route path="/eliana" element={<ElianaRoom />} />
         <Route path="/celeste" element={<CelesteRoom />} />
-
-        <Route path="/bitacora" element={<Bitacora />}
-        />
+        <Route path="/bitacora" element={<Bitacora />} />
+  
+        
         <Route
           path="*"
           element={
@@ -35,6 +38,20 @@ function App() {
           }
         />
       </Routes>
+
+      <button
+              type="button"
+              className="btn-flotante-buscador"
+              onClick={() => setModalAbierto(true)}
+              title="Directorio de Vecinos"
+            >
+              <span>🔍 Directorio de Springfield</span>
+            </button>
+      
+            <ModalDirectorio 
+              isOpen={modalAbierto} 
+              onClose={() => setModalAbierto(false)} 
+            />
     </>
   );
 }
