@@ -77,7 +77,7 @@ export default function Home() {
           <div className="about">
             <h2 id="proposito">Nuestro propósito</h2>
             <p>
-              Somos cuatro compañeros de Frontend armando, en equipo, un sitio propio de punta a punta: HTML, CSS y JavaScript escritos por nosotros, con Git como bitácora de cada decisión. La excusa es <strong>programar con una dona en la mano</strong>; el objetivo es aprender haciendo.
+              Somos cuatro compañeros de Frontend llevando nuestro proyecto grupal al siguiente nivel: <strong>una aplicación web SPA construida de punta a punta con React y Vite</strong>, organizada mediante componentes modulares, React Router y una sidebar compartida. En esta etapa integramos <strong>búsqueda sobre datos locales, consumo de APIs públicas con gestión de estados</strong> y la asistencia de <strong>herramientas de Inteligencia Artificial</strong> para potenciar el código y el diseño. <strong>La excusa sigue siendo programar con una dona en la mano</strong>; el objetivo, aprender haciendo en equipo.
             </p>
             <p className="about-note">Seguí bajando: la casa ya se ve entre las nubes.</p>
           </div>
