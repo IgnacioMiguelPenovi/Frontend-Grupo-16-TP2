@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import SidebarItem from './SidebarItem';
 import '../styles/sidebar.css';
+import ModalDirectorio from './ModalDirectorio';
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalAbierto, setModalAbierto] = useState(false);
   const location = useLocation();
 
   const [prevPathname, setPrevPathname] = useState(location.pathname);
@@ -73,7 +75,7 @@ export default function Sidebar() {
           <div>
             <p className="sidebar-nav-group-title">Principal</p>
             <ul className="sidebar-nav-list">
-              <SidebarItem label = "La Casa" to="/" onClick={() => setIsOpen(false)}/>
+              <SidebarItem label = "La Casa" to="/" end onClick={() => setIsOpen(false)}/>
               <SidebarItem label = "Bitácora" to="/bitacora" onClick={() => setIsOpen(false)}/>
             </ul>
           </div>
@@ -89,11 +91,30 @@ export default function Sidebar() {
             </ul>
           </div>
 
+
+          <div> <p className="sidebar-nav-group-title">Directorio de Springfield</p>
+            <ul className="sidebar-nav-list">
+              <SidebarItem
+                label="🔍 Buscar"
+                onClick={() => {
+                  setIsOpen(false);
+                  setModalAbierto(true);
+                }}
+              />
+            </ul>
+          </div>
+
+
         </nav>
+
+      <ModalDirectorio
+          isOpen={modalAbierto}
+          onClose={() => setModalAbierto(false)}
+        />
 
         {/* Pie de la sidebar */}
         <div className="sidebar-footer">
-          <p style={{ margin: 0 }}>🍩 Frontend TP2 · 2026</p>
+          <p style={{ margin: 0 }}>🍩 Frontend TP2 · Grupo 16 · 2026</p>
         </div>
       </aside>
     </>

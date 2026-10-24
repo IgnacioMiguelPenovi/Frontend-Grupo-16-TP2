@@ -126,69 +126,6 @@ a { color: inherit; }
   @view-transition { navigation: none; }
 }
 
-#mode-toggle {
- position: fixed;
-}
-
-/* Botón flotante Springfield */ 
-
-.btn-flotante-buscador {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 18px;
-  background-color: #fed90f;/* Amarillo Simpson */ 
-  color: #1b1b2f;
-  text-decoration: none;
-  font-family: 'Fredoka', 'Baloo 2', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  border: 3px solid #1b1b2f;
-  border-radius: 50px;
-  box-shadow: 4px 4px 0px #1b1b2f, 0 6px 15px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
-
-/* Efecto hover interactivo */ 
-.btn-flotante-buscador:hover {
-  background-color: #ff4fa0;/* Rosa rosquilla */ 
-  color: #ffffff;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 6px 6px 0px #1b1b2f, 0 8px 20px rgba(255, 79, 160, 0.4);
-}
-
-.btn-flotante-buscador:active {
-  transform: translateY(1px);
-  box-shadow: 2px 2px 0px #1b1b2f;
-}
-
-/* Animación sutil para los emojis */ 
-.btn-flotante-buscador .icono-dona {
-  font-size: 1.3rem;
-  transition: transform 0.3s ease;
-}
-
-.btn-flotante-buscador:hover .icono-dona {
-  transform: rotate(25deg);
-}
-
-/* Opcional: en pantallas muy chicas (< 600px) solo mostrar los iconos */ 
-@media (max-width: 600px) {
-  .btn-flotante-buscador .texto-flotante {
-    display: none;
-  }
-
-  .btn-flotante-buscador {
-    padding: 12px;
-    border-radius: 50%;
-  }
-}
-
 /* Fondo oscuro con desenfoque que deja ver la casa detrás */
 .modal-backdrop {
   position: fixed;

@@ -208,3 +208,13 @@
   text-align: center;
   color: #666;
 }
+
+button.sidebar-link {
+  width: 100%;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

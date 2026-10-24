@@ -238,5 +238,27 @@
     {
         "id": 60,
         "name": "Kodos"
+    },  
+    {
+      "id": 176,
+      "age": null,
+      "birthdate": null,
+      "gender": "Unknown",
+      "name": "Scratchy",
+      "occupation": "Unknown",
+      "portrait_path": "/character/176.webp",
+      "phrases": [],
+      "status": "Fictional"
+    },
+        {
+      "id": 204,
+      "age": null,
+      "birthdate": null,
+      "gender": "Unknown",
+      "name": "Itchy",
+      "occupation": "Unknown",
+      "portrait_path": "/character/204.webp",
+      "phrases": [],
+      "status": "Fictional"
     }
 ]
