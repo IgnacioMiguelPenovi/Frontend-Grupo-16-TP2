@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import NightModeToggle from '../components/NightModeToggle';
 import '../styles/base.css';
 import '../styles/home.css';
 import '../styles/room.css';
@@ -38,14 +39,7 @@ export default function Home() {
       <main className="world">
         {/* 2 · EL CIELO */}
         <section className="sky" aria-labelledby="titulo">
-          <button
-            className="mode-toggle"
-            type="button"
-            aria-pressed={isNight}
-            onClick={toggleNight}
-          >
-            {isNight ? '☀️ Modo día' : '🌙 Modo noche'}
-          </button>
+          <NightModeToggle className="mode-toggle" isNight={isNight} onToggle={toggleNight} />
           <div className="sun" aria-hidden="true"></div>
           <div className="clouds" aria-hidden="true">
             <i className="cloud" style={{ '--x': '4%', '--y': '14%', '--s': 1.5, '--t': '38s', '--dx': '70px', '--p': -0.5 }}></i>

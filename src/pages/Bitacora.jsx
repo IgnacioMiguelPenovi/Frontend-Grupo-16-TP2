@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nube from '../components/Nube';
+import NightModeToggle from '../components/NightModeToggle';
 import '../styles/base.css';
 import '../styles/bitacora.css';
 
@@ -108,14 +109,7 @@ export default function Bitacora() {
     <div className={`log ${isNight ? 'is-night' : ''}`}>
       <main className="smokeland">
         <div className="log-mode-control">
-          <button
-            className="log-mode-toggle"
-            type="button"
-            aria-pressed={isNight}
-            onClick={toggleNight}
-          >
-            {isNight ? '☀️ Modo día' : '🌙 Modo noche'}
-          </button>
+          <NightModeToggle className="log-mode-toggle" isNight={isNight} onToggle={toggleNight} />
         </div>
         <section className="log-hero">
           <h1 className="simpsons-title">Bitácora</h1>
