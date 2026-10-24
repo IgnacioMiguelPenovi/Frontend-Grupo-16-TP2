@@ -9,6 +9,14 @@ import '../styles/bitacora.css';
 // Para agregar una nueva nube, solo sumá un nuevo objeto acá arriba con el siguiente n (ej: n: 6).
 export const ENTRADAS_BITACORA = [
   {
+    n: 10,
+    dia: 'Viernes',
+    fecha: '23 oct 2026',
+    datetime: '2026-10-23',
+    titulo: 'Descubrí información sobre tu personaje favorito',
+    descripcion: 'Se agregó el buscador de personajes y modal de directorio.'
+   },
+   {
     n: 9,
     dia: 'Miércoles',
     fecha: '21 oct 2026',
