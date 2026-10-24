@@ -1,6 +1,7 @@
 /* ===== Habitaciones / perfiles ===== */
 
 .room {
+  position: relative;
   --wall: #5aa9e6;
   --wall-dark: #2f6fa8;
   background:
@@ -32,7 +33,7 @@
 }
 
 .room-mode-control {
-  position: fixed;
+  position: absolute;
   top: 14px;
   right: 14px;
   z-index: 100;

@@ -117,8 +117,8 @@
 .mode-toggle {
   position: absolute;
   z-index: 3;
-  top: 28px;
-  right: 24px;
+  top: 14px;
+  right: 14px;
   padding: 10px 16px;
   border: 3px solid var(--ink);
   border-radius: 999px;
