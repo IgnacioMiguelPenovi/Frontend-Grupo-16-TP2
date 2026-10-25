@@ -1,10 +1,11 @@
 import React from 'react';
+import {createPortal} from 'react-dom';
 import BuscadorPersonaje from './BuscadorPersonaje';
 
 export default function ModalDirectorio({ isOpen, onClose }) {
     if (!isOpen) return null;
 
-    return (
+    return createPortal(
         <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal="true">
             {/* Detenemos la propagación para que al hacer clic dentro de la tarjeta no se cierre */}
             <div className="modal-card-springfield" onClick={(e) =>
@@ -20,6 +21,7 @@ export default function ModalDirectorio({ isOpen, onClose }) {
                 {/* Tu buscador con el JSON y la API */}
                 <BuscadorPersonaje />
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }

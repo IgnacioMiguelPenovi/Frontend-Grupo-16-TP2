@@ -9,10 +9,8 @@ import ScrollToTop from './components/ScrollToTop';
 import ElianaRoom from './rooms/ElianaRoom';
 import Bitacora  from './pages/Bitacora';
 import CelesteRoom from './rooms/CelesteRoom';
-import ModalDirectorio from './components/ModalDirectorio';
 
 function App() {
-  const [modalAbierto, setModalAbierto] = useState(false);
   return (
     <>
       <ScrollToTop />
@@ -39,19 +37,6 @@ function App() {
         />
       </Routes>
 
-      <button
-              type="button"
-              className="btn-flotante-buscador"
-              onClick={() => setModalAbierto(true)}
-              title="Directorio de Vecinos"
-            >
-              <span>🔍 Directorio de Springfield</span>
-            </button>
-      
-            <ModalDirectorio 
-              isOpen={modalAbierto} 
-              onClose={() => setModalAbierto(false)} 
-            />
     </>
   );
 }
