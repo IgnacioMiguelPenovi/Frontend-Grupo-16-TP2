@@ -6,7 +6,7 @@ import GitHubProjects from '../components/GitHubProjects';
 const DATOS_CELESTE = {
   nombre: 'Celeste',
   rol: 'Estudiante de Front End',
-  bio: 'Crecí entre las calles de arena y el paisaje costero de Las Toninas, un entorno que marcó profundamente mis raíces. Mi trabajo como implementadora de la plataforma de Trámites a Distancia (TAD) en la APN fue el impulso que me motivó a estudiar la Tecnicatura en Desarrollo de Software. Hoy en día, continúo construyendo mi camino con el firme objetivo de seguir creciendo en el ámbito laboral, aprendiendo cada día y explorando nuevos conocimientos.',
+  bio: 'Casi no habla, pero sus commits siempre pasan los tests. Aprende más rápido que todos, duerme la siesta durante las daily y nunca suelta el chupete.',
   chips: ['📍 Caba', '🎂 39', 'HTML', 'CSS', 'React'],
   peliculas: [
     { titulo: 'Mujer bonita', detalle: '1990 · Te ves bellísima' },
