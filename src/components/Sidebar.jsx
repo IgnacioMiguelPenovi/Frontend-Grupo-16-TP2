@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import SidebarItem from './SidebarItem';
 import '../styles/sidebar.css';
 import ModalDirectorio from './ModalDirectorio';
@@ -75,24 +75,24 @@ export default function Sidebar() {
           <div>
             <p className="sidebar-nav-group-title">Principal</p>
             <ul className="sidebar-nav-list">
-              <SidebarItem label = "La Casa" to="/" end onClick={() => setIsOpen(false)}/>
-              <SidebarItem label = "Bitácora" to="/bitacora" onClick={() => setIsOpen(false)}/>
+              <SidebarItem label="La Casa" to="/" end onClick={() => setIsOpen(false)} />
+              <SidebarItem label="Bitácora" to="/bitacora" onClick={() => setIsOpen(false)} />
+              <SidebarItem label="🌳 Árbol del proyecto" to="/arbol" onClick={() => setIsOpen(false)} />
             </ul>
           </div>
 
           <div>
             <p className="sidebar-nav-group-title">Integrantes</p>
             <ul className="sidebar-nav-list">
-
-              <SidebarItem label = "Ignacio" to="/ignacio" onClick={() => setIsOpen(false)}/>
-              <SidebarItem label = "Ester" to="/ester" onClick={() => setIsOpen(false)}/>
-              <SidebarItem label = "Eliana" to="/eliana" onClick={() => setIsOpen(false)}/>
-              <SidebarItem label = "Celeste" to="/celeste" onClick={() => setIsOpen(false)}/>
+              <SidebarItem label="Ignacio" to="/ignacio" onClick={() => setIsOpen(false)} />
+              <SidebarItem label="Ester" to="/ester" onClick={() => setIsOpen(false)} />
+              <SidebarItem label="Eliana" to="/eliana" onClick={() => setIsOpen(false)} />
+              <SidebarItem label="Celeste" to="/celeste" onClick={() => setIsOpen(false)} />
             </ul>
           </div>
 
-
-          <div> <p className="sidebar-nav-group-title">Directorio de Springfield</p>
+          <div>
+            <p className="sidebar-nav-group-title">Directorio de Springfield</p>
             <ul className="sidebar-nav-list">
               <SidebarItem
                 label="🔍 Buscar"
@@ -103,11 +103,9 @@ export default function Sidebar() {
               />
             </ul>
           </div>
-
-
         </nav>
 
-      <ModalDirectorio
+        <ModalDirectorio
           isOpen={modalAbierto}
           onClose={() => setModalAbierto(false)}
         />
