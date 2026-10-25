@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import VisitRooms from './VisitRooms';
 import NightModeToggle from './NightModeToggle';
 
 export default function RoomLayout({
@@ -81,8 +80,6 @@ export default function RoomLayout({
         {/* 4. Widget o actividad interactiva propia */}
         {children}
 
-        {/* 5. Links a otras habitaciones */}
-        <VisitRooms currentRoomId={roomClass} />
       </main>
 
       <div className="room-mode-control">
