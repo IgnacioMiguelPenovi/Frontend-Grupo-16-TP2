@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import {Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import IgnacioRoom from './rooms/IgnacioRoom';
 import EsterRoom from './rooms/EsterRoom';
@@ -7,8 +6,9 @@ import PlaceholderPage from './pages/PlaceholderPage';
 import Sidebar from './components/Sidebar';
 import ScrollToTop from './components/ScrollToTop';
 import ElianaRoom from './rooms/ElianaRoom';
-import Bitacora  from './pages/Bitacora';
+import Bitacora from './pages/Bitacora';
 import CelesteRoom from './rooms/CelesteRoom';
+import Arbol from './pages/Arbol';
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
         <Route path="/eliana" element={<ElianaRoom />} />
         <Route path="/celeste" element={<CelesteRoom />} />
         <Route path="/bitacora" element={<Bitacora />} />
-  
-        
+        <Route path="/arbol" element={<Arbol />} />
+
         <Route
           path="*"
           element={
@@ -36,7 +36,6 @@ function App() {
           }
         />
       </Routes>
-
     </>
   );
 }
