@@ -44,7 +44,7 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | --- | --- |
 | Ignacio Miguel Penovi | Migración de algunos elementos a Vite desde html y desarrollo general. |
 | Eliana Moguilevsky |  |
-| Ester Mosquera | |
+| Ester Mosquera | Migración de la portada a React, creación del buzón de la portada, botón del modo día/noche y del árbol renderizado. |
 | Celeste Di Leonardo |  |
 
 ### Uso de IA por integrante
@@ -52,3 +52,4 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | Integrante | Aplicación | Modelo |
 | --- | --- | --- |
 | Ignacio Miguel Penovi |  Se utilizó para acelerar el proceso de migración a Vite y la creación de estilos en css| Claude Opus y Argon | 
+| Ester Mosquera |  Se utilizó para el proceso de migración a React , ajustes en los estilos en css y para crear el árbol renderizado y el modo noche/día| Claude Opus 4.6 y Chat GPT Luna 6 y Terra 5.6| 

@@ -958,3 +958,57 @@ button.mailbox::after {
 .letter-content strong {
   color: #c92a2a;
 }
+
+
+/* ==========================================================
+   Ajuste responsive para Buzón y Carta en pantallas chicas (iPhone / móviles)
+   ========================================================== */
+@media (max-width: 900px) {
+  .mailbox-wrapper {
+    left: max(16px, 4%);
+  }
+
+  .mailbox-letter {
+    left: 0;
+    transform: none;
+    width: min(270px, calc(100vw - 32px));
+    animation-name: popLetterMobile;
+  }
+
+  /* La flechita de la carta apunta al centro del buzón (50px / 2 = 25px) */
+  .mailbox-letter::after {
+    left: 25px;
+    transform: translateX(-50%);
+  }
+
+  .mailbox-arrow-hint {
+    left: 0;
+    transform: none;
+    align-items: flex-start;
+    animation-name: bounceHintMobile;
+  }
+
+  .mailbox-arrow-hint .arrow-icon {
+    margin-left: 17px;
+  }
+}
+
+@keyframes popLetterMobile {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounceHintMobile {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
