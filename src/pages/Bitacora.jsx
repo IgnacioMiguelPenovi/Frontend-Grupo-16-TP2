@@ -8,6 +8,14 @@ import '../styles/bitacora.css';
 // Registro de trabajo: del día más reciente al más antiguo.
 // Para agregar una nueva nube, solo sumá un nuevo objeto acá arriba con el siguiente n (ej: n: 6).
 export const ENTRADAS_BITACORA = [
+    {
+    n: 11,
+    dia: 'Domingo',
+    fecha: '25 oct 2026',
+    datetime: '2026-10-25',
+    titulo: 'Arbol de renderizado ',
+    descripcion: 'Se agregó el esquema de la jerarquía de componentes.'
+   },
   {
     n: 10,
     dia: 'Viernes',
@@ -151,35 +159,7 @@ export default function Bitacora() {
         <div className="ground" aria-hidden="true"></div>
       </main>
       <footer className="log-foot">
-        <nav className="visit" aria-label="Otras habitaciones">
-          <h2>Visitá las habitaciones</h2>
-          <ul>
-            <li>
-              <Link to="/ester">
-                <img className="avatar lisa" src="/img/avatar-ester.png" alt="" />
-                Ester
-              </Link>
-            </li>
-            <li>
-              <Link to="/eliana">
-                <img className="avatar marge" src="/img/avatar-eliana.png" alt="" />
-                Eliana
-              </Link>
-            </li>
-            <li>
-              <Link to="/celeste">
-                <img className="avatar maggie" src="/img/avatar-celeste.png" alt="" />
-                Celeste
-              </Link>
-            </li>
-            <li>
-              <Link to="/ignacio">
-                <img className="avatar bart" src="/img/avatar-ignacio.png" alt="" />
-                Ignacio
-              </Link>
-            </li>
-          </ul>
-        </nav>
+  
         <br />
         <p>
           Hecho con 🍩 y mucho café por <strong>Donuts &amp; Code</strong> · 2026 · ¡D&apos;oh!
