@@ -24,6 +24,7 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | Aplicación utilizada | Modelo utilizado |
 | --- | --- |
 | Antigravity | Claude Opus y Argon |
+| Chat GPT | Luna 6 y Terra 5.6 |
 
 <!-- Agreguen las herramientas que usaron. Aplicación y modelo son datos distintos. -->
 
@@ -44,7 +45,7 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | --- | --- |
 | Ignacio Miguel Penovi | Migración de algunos elementos a Vite desde html y desarrollo general. |
 | Eliana Moguilevsky |  |
-| Ester Mosquera | Migración de la portada a React, creación del buzón de la portada, botón del modo día/noche y del árbol renderizado. |
+| Ester Mosquera | Migración de la portada y de la room de Ester a React, creación de la interacción del buzón de la portada, botón del modo día/noche y del árbol renderizado. |
 | Celeste Di Leonardo |  |
 
 ### Uso de IA por integrante
