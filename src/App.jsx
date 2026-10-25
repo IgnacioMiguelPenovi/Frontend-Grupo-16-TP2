@@ -28,7 +28,7 @@ function App() {
           path="*"
           element={
             <PlaceholderPage
-              title="Sección en construcción"
+              title="La página no se encuentra. ¡D'oh!"
               subtitle="Springfield 404"
               name="el equipo de Donuts & Code"
               avatar="/img/logo.png"
