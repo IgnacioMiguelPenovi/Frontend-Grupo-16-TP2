@@ -10,6 +10,11 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 
 - Vercel: [https://frontend-grupo-16-tp-2.vercel.app/](https://frontend-grupo-16-tp-2.vercel.app/)
 
+## Repositorio 
+
+- Github: [https://github.com/IgnacioMiguelPenovi/Frontend-Grupo-16-TP2.git](https://github.com/IgnacioMiguelPenovi/Frontend-Grupo-16-TP2.git)
+
+
 ## Integrantes
 
 | Nombre y apellido | Perfil de GitHub |
@@ -25,6 +30,7 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | --- | --- |
 | Antigravity | Claude Opus y Argon |
 | Chat GPT | Luna 6 y Terra 5.6 |
+| Gemini Notebook | Gemini 2.5 |
 
 <!-- Agreguen las herramientas que usaron. Aplicación y modelo son datos distintos. -->
 
@@ -44,7 +50,7 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | Integrante | Responsabilidad en el proyecto |
 | --- | --- |
 | Ignacio Miguel Penovi | Migración de algunos elementos a Vite desde html y desarrollo general. |
-| Eliana Moguilevsky |  |
+| Eliana Moguilevsky | Migración de los elementos de la room de Eliana a React, página 404/fallbacks, estructuración de dataset local (personajes.json), buscador + integración con Api pública (thesimpsonsapi.com), diseño de componente modal, debugging |
 | Ester Mosquera | Migración de la portada y de la room de Ester a React, creación de la interacción del buzón de la portada, botón del modo día/noche y del árbol renderizado. |
 | Celeste Di Leonardo |  |
 
@@ -54,3 +60,4 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | --- | --- | --- |
 | Ignacio Miguel Penovi |  Se utilizó para acelerar el proceso de migración a Vite y la creación de estilos en css| Claude Opus y Argon | 
 | Ester Mosquera |  Se utilizó para el proceso de migración a React , ajustes en los estilos en css y para crear el árbol renderizado y el modo noche/día| Claude Opus 4.6 y Chat GPT Luna 6 y Terra 5.6| 
+| Eliana Moguilevsky | Se utilizó como copiloto para la migración a React, desarrollo del buscador de personajes (consumo de API pública + JSON local), diseño del modal y debugging general  | Gemini Notebook y Gemini 2.5  | 
