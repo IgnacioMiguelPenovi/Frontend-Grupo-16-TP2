@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import VisitRooms from './VisitRooms';
+import NightModeToggle from './NightModeToggle';
 
 export default function RoomLayout({
   roomClass, // 'ester', 'ignacio', 'eliana', 'celeste'
@@ -28,17 +29,6 @@ export default function RoomLayout({
   return (
     <div className={`room ${roomClass} ${isNight ? 'is-night' : ''}`}>
       <main className="room-main">
-        <div className="room-mode-control">
-          <button
-            className="room-mode-toggle"
-            type="button"
-            aria-pressed={isNight}
-            onClick={toggleNight}
-          >
-            {isNight ? '☀️ Modo día' : '🌙 Modo noche'}
-          </button>
-        </div>
-
         {/* 2. Escenario del personaje */}
         <div className="stage-frame">
           {stage}
@@ -94,6 +84,10 @@ export default function RoomLayout({
         {/* 5. Links a otras habitaciones */}
         <VisitRooms currentRoomId={roomClass} />
       </main>
+
+      <div className="room-mode-control">
+        <NightModeToggle className="room-mode-toggle" isNight={isNight} onToggle={toggleNight} />
+      </div>
 
       {/* 6. Pie de página */}
       <footer className="room-foot">

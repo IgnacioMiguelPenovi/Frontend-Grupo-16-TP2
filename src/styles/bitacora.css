@@ -3,8 +3,8 @@
 /* ---------- control de modo día/noche ---------- */
 .log-mode-control {
   position: absolute;
-  top: 18px;
-  right: 24px;
+  top: 14px;
+  right: 14px;
   z-index: 100;
   display: flex;
 }

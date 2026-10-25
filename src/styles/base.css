@@ -13,6 +13,10 @@
   --font-body: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
 }
 
+* {
+  scrollbar-width: none; 
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -120,5 +124,13 @@ a { color: inherit; }
   }
   @view-transition { navigation: none; }
 }
+
+@media (max-width: 1024px) {
+  .mode-label {
+    display: none;
+  }
+}
+
+
 
 

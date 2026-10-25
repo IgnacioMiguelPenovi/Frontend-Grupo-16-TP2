@@ -53,7 +53,7 @@ export default function BuscadorPersonaje() {
             <h2>🍩 Buscador de Habitantes de Springfield</h2>
 
             {/* Controles de Búsqueda */}
-            <div clasName="buscador-controles">
+            <div className="buscador-controles">
                 <label htmlFor="input-nombre">Escribí el nombre del personaje: </label>
                 <input
                     id="input-nombre"
