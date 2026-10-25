@@ -155,7 +155,7 @@ export default function Home() {
                           <img src="/img/avatar-celeste.png" alt="" />
                         </span>
                       </span>
-                      <span className="name">Celeste<small>???</small></span>
+                     <span className="name">Celeste<small>Junior Dev</small></span>
                     </Link>
 
                   </div>
