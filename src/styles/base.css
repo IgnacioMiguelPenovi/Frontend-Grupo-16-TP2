@@ -125,6 +125,12 @@ a { color: inherit; }
   @view-transition { navigation: none; }
 }
 
+@media (max-width: 1024px) {
+  .mode-label {
+    display: none;
+  }
+}
+
 
 
 
