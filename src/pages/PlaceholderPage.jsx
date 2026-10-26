@@ -69,7 +69,7 @@ export default function PlaceholderPage({ title, subtitle, name, avatar }) {
             </Link>
           </div>
         </div>
-              <footer className="foot" id="error404">
+              <footer className="room-foot">
         <p>Hecho con 🍩 y mucho café por <strong>Donuts &amp; Code</strong> · 2026 · ¡D'oh!</p>
       </footer>
       </div>
