@@ -108,6 +108,7 @@ const ESTRUCTURA_PROYECTO = {
             { name: 'arbol.css', type: 'file', ext: 'css', icon: '🎨', desc: 'Estilos del árbol del proyecto y modo noche' },
             { name: 'base.css', type: 'file', ext: 'css', icon: '🎨', desc: 'Variables CSS, tipografías y estilos base' },
             { name: 'bitacora.css', type: 'file', ext: 'css', icon: '🎨', desc: 'Estilos para la bitácora y chimenea nuclear' },
+            { name: 'buscador.css', type: 'file', ext: 'css', icon: '🎨', desc: 'Estilos para el buscador de personajes' },
             { name: 'github.css', type: 'file', ext: 'css', icon: '🎨', desc: 'Estilos de las tarjetas de GitHub' },
             { name: 'home.css', type: 'file', ext: 'css', icon: '🎨', desc: 'Estilos del cielo animado, casa y garage' },
             { name: 'peinado.css', type: 'file', ext: 'css', icon: '🎨', desc: 'Estilos para la interacción del peinado de Marge' },
