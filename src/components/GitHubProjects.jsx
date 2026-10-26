@@ -5,8 +5,11 @@ export default function GitHubProjects({ username }) {
   const [repos, setRepos] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
+  const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
+    setLoading(true);
+    setError('');
     fetch(`https://api.github.com/users/${username.trim()}/repos?sort=updated&per_page=100`)
       .then((res) => {
         if (!res.ok) throw new Error('No se pudieron cargar los proyectos');
@@ -21,7 +24,7 @@ export default function GitHubProjects({ username }) {
       )
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
-  }, [username]);
+  }, [username, retryCount]);
 
   return (
     <section className="github-projects">
@@ -31,7 +34,14 @@ export default function GitHubProjects({ username }) {
 
       {loading && <p>Cargando proyectos de GitHub...</p>}
 
-      {error && <p className="github-projects__error">{error}</p>}
+      {error && (
+        <div className="github-projects__error">
+          <p>{error}</p>
+          <button type="button" onClick={() => setRetryCount((count) => count + 1)}>
+            Reintentar
+          </button>
+        </div>
+      )}
 
       <div className="github-projects__grid">
         {repos.map((repo) => (
