@@ -46,7 +46,7 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | Ignacio Miguel Penovi | Migración de algunos elementos a Vite desde html y desarrollo general. |
 | Eliana Moguilevsky |  |
 | Ester Mosquera | Migración de la portada y de la room de Ester a React, creación de la interacción del buzón de la portada, botón del modo día/noche y del árbol renderizado. |
-| Celeste Di Leonardo |  |
+| Celeste Di Leonardo | Perfil de Maggie en React (contenido, diseño y estilos), carga de los años de los discos y películas, modificación del juego y fork de los repositorios de la cursada. |
 
 ### Uso de IA por integrante
 
@@ -54,3 +54,4 @@ La app incluye navegación SPA con React Router, una sidebar compartida, modo no
 | --- | --- | --- |
 | Ignacio Miguel Penovi |  Se utilizó para acelerar el proceso de migración a Vite y la creación de estilos en css| Claude Opus y Argon | 
 | Ester Mosquera |  Se utilizó para el proceso de migración a React , ajustes en los estilos en css y para crear el árbol renderizado y el modo noche/día| Claude Opus 4.6 y Chat GPT Luna 6 y Terra 5.6| 
+| Celeste Di Leonardo | Claude (claude.ai) y Gemini: se utilizaron para armar la estructura, el contenido y los estilos del perfil de Maggie, y para entender, modificar y corregir errores del juego. | Claude Sonnet 5.5 y Gemini 2.5 Pro |
